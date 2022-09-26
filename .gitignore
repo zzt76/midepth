@@ -1,0 +1,13 @@
+# folders
+__pycache__
+.cache
+.vscode
+backup
+old
+wandb
+checkpoints*
+logs*
+result*
+vis*
+
+# files

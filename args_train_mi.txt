@@ -1,0 +1,24 @@
+--bs 12
+--distributed
+--dataset mi
+--lr 0.0001
+--wd 0.1
+--div_factor 25
+--final_div_factor 100
+--epochs 30
+--workers 11
+--name WeightedUnet
+--root .
+--log_loss_freq 200
+--log_image_freq 1000
+--filenames_file ./train_test_inputs/mi_train.txt
+--filenames_file_eval ./train_test_inputs/mi_val.txt
+--input_height 416
+--input_width 544
+--min_depth 0.001
+--max_depth 10
+--validate_every 3000
+--do_random_rotate
+--degree 2.5
+--min_depth_eval 1e-3
+--max_depth_eval 10

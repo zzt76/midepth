@@ -1,0 +1,33 @@
+--bs 8
+--distributed
+--dataset kitti
+--lr 0.00012
+--wd 0.01
+--div_factor 25
+--final_div_factor 100
+--epochs 20
+--workers 7
+--name WeightedUnet
+--root .
+--finetune
+--resume_path ./checkpoints_ml/WeightedUnet_29.pt
+--data_path ../datasets/kitti/raw
+--gt_path ../datasets/kitti/gts
+--filenames_file ./train_test_inputs/eigen_train_files_with_gt.txt
+--input_height 352
+--input_width 704
+--min_depth 0.001
+--max_depth 80
+--do_random_rotate
+--degree 1.0
+--log_loss_freq 50
+--log_image_freq 500
+--validate_every 1200
+--online_eval_after 0
+--data_path_eval ../datasets/kitti/raw
+--gt_path_eval ../datasets/kitti/gts
+--filenames_file_eval ./train_test_inputs/eigen_test_files_with_gt.txt
+--min_depth_eval 1e-3
+--max_depth_eval 80
+--do_kb_crop
+--garg_crop

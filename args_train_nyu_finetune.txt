@@ -1,0 +1,32 @@
+--bs 12
+--distributed
+--dataset nyu
+--lr 0.00005
+--wd 0.01
+--div_factor 25
+--final_div_factor 100
+--epochs 20
+--workers 11
+--name WeightedUnet
+--root .
+--resume_path checkpoints_ml/WeightedUnet_29.pt
+--finetune
+--online_eval_after 0
+--data_path ../datasets/nyu_dataset/sync/
+--gt_path ../datasets/nyu_dataset/sync/
+--filenames_file ./train_test_inputs/nyudepthv2_train_files_with_gt.txt
+--input_height 416
+--input_width 544
+--min_depth 0.001
+--max_depth 10
+--do_random_rotate
+--degree 2.5
+--log_loss_freq 50
+--log_image_freq 500
+--validate_every 800
+--data_path_eval ../datasets/nyu_dataset/official_splits/test/
+--gt_path_eval ../datasets/nyu_dataset/official_splits/test/
+--filenames_file_eval ./train_test_inputs/nyudepthv2_test_files_with_gt.txt
+--min_depth_eval 1e-3
+--max_depth_eval 10
+--eigen_crop
